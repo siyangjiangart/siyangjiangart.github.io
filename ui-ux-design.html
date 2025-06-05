@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 重置所有默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 整体页面样式 */
+        body {
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            color: #000000;
+        }
+
+        /* 覆盖原有的深色背景 */
+        header, main, footer, section {
+            background-color: #ffffff !important;
+        }
+
+        #videoWorks {
+            padding: 30px 20px;
+            background-color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #videoWorks h2 {
+            color: #000000;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 30px;
+        }
+
+        .video-item {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-item h4 {
+            color: #000000;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 25px 0 15px;
+        }
+
+        .video-item p {
+            color: #333333;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .project-overview {
+            padding: 30px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .project-overview h2 {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .overview-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;  /* 基础间距 */
+        }
+
+        .overview-content .spacing {
+            height: 20px;  /* 额外的间距 */
+        }
+
+        .overview-content p {
+            color: #333333;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding-left: 20px;
+            position: relative;
+            max-width: 900px;  /* 控制文本宽度 */
+        }
+
+        .overview-content p::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #000000;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #ffffff !important;
+        }
+
+        nav a {
+            color: #000000 !important;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            #videoWorks h2 {
+                font-size: 1.5rem;
+            }
+
+            .video-item h4 {
+                font-size: 1.2rem;
+            }
+
+            .video-item p,
+            .overview-content p {
+                font-size: 0.95rem;
+            }
+
+            .project-overview h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        .overview-image {
+            margin-top: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+
+        .project-overview h3 {
+            color: #000000;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 30px 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- 导航栏内容 -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="videoWorks">
+            <h2>UI/UX Design</h2>
+            
+            <div class="video-item">
+                <video controls autoplay loop muted playsinline>
+                    <source src="videos/video15.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h4>North Pad-2024</h4>
+                <p>This is a presentation of a UI/UX design project. In this work, I focused on user experience and interface design, creating an intuitive and visually appealing interactive interface. Through in-depth user research and iterative design, I achieved a solution that is both aesthetically pleasing and functional.</p>
+            </div>
+
+            <!-- 添加 Project Overview 部分 -->
+            <div class="project-overview">
+                <h2>Project Overview</h2>
+                
+                <div class="overview-content">
+                    <p>• The product: A mobile app which allows users to donate money for polar bears, obtaining in exchange prizes such as gadgets that allow the users to personalize a small digital bear</p>
+                    
+                    <p>• Project duration:27/10/2024 to 27/10/2025</p>
+                    <!-- 添加间距和新内容 -->
+                    <div class="spacing"></div>
+
+                    <p>• The problem: Donating for polar bears is not very intuitive given that there are no mobile apps specifically for this purpose but only websites which are not very user friendly on mobile even in their design. Furthermore, there is often a need to donate a minimum amount of money, and this prevents even those who would like to donate smaller amounts from donating</p>
+
+                    <p>• The goal: NorthPad will let users donate, even small amounts of money, which will affect donations from all over the world for polar bears by creating an interaction with users and allowing personalization of a small digital white bear. We will measure effectiveness by comparing the number of users and the number of donations made</p>
+                </div>
+            </div>
+
+            <!-- 在 overview-image div 后添加 -->
+            <div class="project-overview">
+                <h2>User Research</h2>
+                
+                <div class="overview-content">
+                    <p>• As a young professional, I want to make small but frequent donations to help polar bears, so that I can contribute to conservation efforts within my budget constraints</p>
+                    
+                    <p>• As an animal lover, I want to see the direct impact of my donations, so that I know my contribution is making a real difference</p>
+                    
+                    <p>• As a mobile user, I want an intuitive and engaging donation experience, so that I can easily support the cause while enjoying the process</p>
+                    
+                    <p>• As a social media enthusiast, I want to share my digital bear and donation achievements, so that I can inspire others to join the cause</p>
+                    
+                    <p>• As a busy person, I want a quick and simple donation process, so that I can contribute without spending too much time</p>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="images/image6.jpeg" alt="Project Image" class="project-image">
+            </div>
+
+            <!-- 在 image6.jpeg 后添加新内容 -->
+            <div class="project-overview">
+                <h2>Problem Statement</h2>
+                
+                <div class="overview-content">
+                    <p>• Sarah is a young environmentally conscious professional who needs an engaging and flexible way to contribute to polar bear conservation because traditional donation platforms don't accommodate small, frequent donations or provide meaningful feedback on impact</p>
+                    
+                    <p>• Michael is a busy social media user who needs a quick and shareable way to support wildlife causes because he wants to make a difference while inspiring his network to join the movement</p>
+                    
+                    <p>• Emma is a student animal lover who needs an affordable and interactive donation experience because she wants to feel personally connected to the cause despite her limited budget</p>
+                </div>
+
+                <div class="spacing"></div>
+
+                <h3>Solution Hypothesis</h3>
+                <div class="overview-content">
+                    <p>• If we provide a mobile app with customizable digital bears and flexible donation options, then users will be more likely to make regular contributions and stay engaged with the cause</p>
+                    
+                    <p>• If we implement social sharing features and visual progress tracking, then users will feel more connected to the impact of their donations and spread awareness</p>
+                    
+                    <p>• If we create an intuitive, gamified donation experience, then users will find it easier and more enjoyable to support polar bear conservation</p>
+                </div>
+            </div>
+
+            <!-- 在 Problem Statement 部分后添加 -->
+            <div class="project-overview">
+                <h2>Storyboard</h2>
+                
+                <div class="overview-image">
+                    <img src="images/image12.png" alt="Storyboard" class="project-image">
+                </div>
+            </div>
+
+            <!-- 在 Problem Statement 部分后，Mockups 部分前添加 -->
+            <div class="project-overview">
+                <h2>Sitemap</h2>
+                
+                <div class="overview-content">
+                    <p>The sitemap illustrates the core functionalities and navigation structure of the NorthPad app, including:</p>
+                    <p>• User authentication and profile management</p>
+                    <p>• Donation system and payment processing</p>
+                    <p>• Digital bear customization features</p>
+                    <p>• Social sharing and community engagement</p>
+                    <p>• Progress tracking and achievement system</p>
+                </div>
+                
+                <div class="overview-image">
+                    <img src="images/image9.png" alt="Sitemap" class="project-image">
+                </div>
+
+                <!-- 在 Sitemap 模块内添加 Logo Design -->
+                <h2>Our Logo Design</h2>
+                
+                <div class="overview-content">
+                    <p>Our logo design represents a powerful fusion of concepts that embodies our mission:</p>
+                    
+                    <p>• The polar bear silhouette merges with melting ice patterns, symbolizing the urgent impact of global warming on Arctic habitats</p>
+                    
+                    <p>• The typography integrates seamlessly with the visual elements, creating a cohesive design that represents both the problem and our commitment to solution</p>
+                    
+                    <p>• The minimalist approach emphasizes the simplicity of our message: every small action counts in the fight against climate change and wildlife conservation</p>
+                    
+                    <p>• The design elements flow together to create a sense of movement, representing the ongoing nature of our conservation efforts and the continuous support from our community</p>
+                </div>
+                
+                <div class="overview-image">
+                    <img src="images/image10.png" alt="Logo Design" class="project-image">
+                </div>
+
+                <!-- 在 Logo Design 后添加 Icon Design -->
+                <h2>Our Icon Design</h2>
+                
+                <div class="overview-content">
+                    <p>Our icon design features a brand ambassador that embodies our mission while maintaining an approachable and engaging presence:</p>
+                    
+                    <p>• The cute polar bear mascot serves as a friendly face for our serious cause, making the donation experience more appealing and accessible to users of all ages</p>
+                    
+                    <p>• The playful design approach helps transform the act of donation into an engaging and rewarding experience, particularly attracting younger generations to participate in wildlife conservation</p>
+                    
+                    <p>• While maintaining its adorable appearance, the mascot subtly reminds users of the urgent environmental challenges facing polar bears, creating an emotional connection that encourages long-term engagement</p>
+                    
+                    <p>• The character's expressive design allows for various emotional states and interactions, making the app experience more dynamic and personally connecting with users</p>
+                    
+                    <p>• The simplicity of the design ensures it works well across different platforms and sizes while maintaining its charm and recognition</p>
+                </div>
+                
+                <div class="overview-image">
+                    <img src="images/image11.png" alt="Icon Design" class="project-image">
+                </div>
+            </div>
+
+            <!-- 然后是现有的 Mockups 部分 -->
+            <div class="project-overview">
+                <h2>Mockups</h2>
+                
+                <div class="overview-content">
+                    <p>Our mockups demonstrate the key features and user interface of the NorthPad app:</p>
+                    
+                    <h3>Goal Statement</h3>
+                    <p>Our mobile application will let users make micro-donations and personalize digital polar bears, which will affect both wildlife conservation efforts and global awareness by creating an engaging, gamified experience that connects users directly with the cause. We will measure effectiveness by tracking:</p>
+                    
+                    <p>• Number of active users and frequency of donations</p>
+                    <p>• Total amount of donations and average donation size</p>
+                    <p>• User engagement metrics with digital bear customization</p>
+                    <p>• Social sharing rates and community growth</p>
+                    <p>• User retention and long-term participation rates</p>
+                </div>
+
+                <div class="overview-image">
+                    <img src="images/image8.png" alt="Mockups" class="project-image">
+                </div>
+
+                <div class="overview-image">
+                    <img src="images/image7.png" alt="Goal Metrics" class="project-image">
+                </div>
+
+                <!-- 添加项目状态说明 -->
+                <div class="overview-content" style="text-align: center; margin-top: 40px; font-style: italic;">
+                    <p>This is an ongoing project with partial feature demonstrations. Stay tuned for the official launch...</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- 页脚内容 -->
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
