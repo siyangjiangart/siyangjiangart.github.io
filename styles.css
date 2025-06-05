@@ -1,0 +1,581 @@
+/* Modern Minimal Design */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --accent-color: #f5f5f5;
+    --text-color: #333333;
+    --spacing-unit: 2rem;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color var(--transition-speed);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0.5rem 0;
+}
+
+/* Home Section */
+#home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+
+#homeVideo {
+    width: 80vh; /* 4:5 aspect ratio based on viewport height */
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.76); /* Increase by 10% from 1.6 */
+    transform-origin: center center;
+    z-index: 1;
+}
+
+.home-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--secondary-color);
+    z-index: 2;
+}
+
+.artist-name {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Portfolio Sections */
+.portfolio-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-unit);
+}
+
+section {
+    margin: 6rem 0;
+}
+
+/* Unified Section Titles */
+h2, h3 {
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+/* Button Container - Updated for vertical layout */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.large-button {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/9;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform var(--transition-speed);
+}
+
+.large-button:hover {
+    transform: scale(1.02);
+}
+
+.video-preview {
+    width: 100%;
+    height: 100%;
+}
+
+.video-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-text {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+}
+
+.gallery-video {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.gallery-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-video h4 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.gallery-video p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .submenu {
+        position: static;
+        box-shadow: none;
+        padding: 0.5rem 0;
+    }
+
+    .artist-name {
+        font-size: 2.5rem;
+    }
+
+    .button-container {
+        padding: 0 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Sub-pages Common Styles */
+.video-item {
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.video-item h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.video-item p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.video-item ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.video-item ul li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.video-item ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.project-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image Gallery in Sub-pages */
+.image-gallery {
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+/* Back to Portfolio Link */
+nav ul li a[href="index.html"] {
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design for Sub-pages */
+@media (max-width: 768px) {
+    .video-item {
+        padding: 0 1rem;
+    }
+
+    .video-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .video-item p,
+    .video-item ul li {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 0.5rem;
+    }
+
+    /* Home Section */
+    #homeVideo {
+        width: 100%;
+        height: 100vh;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .artist-name {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    /* Portfolio Sections */
+    .portfolio-container {
+        padding: 1rem;
+    }
+
+    section {
+        margin: 3rem 0;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* Button Container */
+    .button-container {
+        gap: 2rem;
+    }
+
+    .large-button {
+        aspect-ratio: 16/9;
+    }
+
+    .button-text {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .profile-photo {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Image Gallery */
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .gallery-image {
+        height: 250px;
+    }
+
+    .gallery-video {
+        height: 250px;
+    }
+
+    .gallery-video h4 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .gallery-video p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Contact Section */
+    .contact-info {
+        padding: 0 1rem;
+    }
+
+    .contact-item {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 480px) {
+    .artist-name {
+        font-size: 2rem;
+    }
+
+    .button-text {
+        font-size: 0.9rem;
+    }
+
+    .gallery-image,
+    .gallery-video {
+        height: 200px;
+    }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+    #home {
+        height: -webkit-fill-available;
+    }
+}
+
+
+
